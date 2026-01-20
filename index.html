@@ -12,6 +12,7 @@
       --primary: #2563eb;
       --text-dark: #1f2937;
       --text-light: #6b7280;
+      --border-light: #e5e7eb;
     }
 
     * {
@@ -37,28 +38,39 @@
       background: var(--card-bg);
       border-radius: 16px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-      padding: 28px;
+      padding: 32px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-    }
-
-    header {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+      gap: 28px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.1rem;
       color: var(--text-dark);
     }
 
     header p {
-      margin: 0;
+      margin: 4px 0 0;
       color: var(--text-light);
       font-size: 1rem;
+    }
+
+    .about {
+      max-width: 800px;
+      line-height: 1.7;
+      color: #374151;
+      font-size: 1.02rem;
+    }
+
+    .about a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .about a:hover {
+      text-decoration: underline;
     }
 
     .actions {
@@ -94,7 +106,7 @@
       height: 80vh;
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--border-light);
     }
 
     .pdf-container iframe {
@@ -119,17 +131,51 @@
 
 <body>
   <main class="card">
+
     <header>
       <h1>Yogesh Chawla</h1>
-      <p>Curriculum Vitae</p>
+      <p>Graduate Research Assistant · Robotics · Autonomous Systems</p>
     </header>
+
+    <section class="about">
+      <p>
+        I am pursuing a master’s degree at the University of Nebraska–Lincoln in the
+        Biological Systems Engineering department, where I work as a Graduate Research
+        Assistant (GRA) in the MAARS Lab.
+      </p>
+
+      <p>
+        I completed a dual-degree program at the Indian Institute of Technology (IIT)
+        Kharagpur, majoring in Agricultural and Food Engineering with a micro-specialisation
+        in Artificial Intelligence. My research vision has been shaped by my experience
+        working at the University of Calgary, Iowa State University, and Purdue University.
+      </p>
+
+      <p>
+        My research interests lie in robotics — teaching systems to see, think,
+        and move autonomously.
+      </p>
+
+      <p>
+        It’s only fair that I get to know you too.
+        Feel free to <a href="mailto:yogeshchawla2850@gmail.com">shoot me an email</a>
+        and let’s chat!
+      </p>
+
+      <p>
+        For more details about my work, visit my portfolio:
+        <a href="http://yogesh-chawla.com/" target="_blank">
+          yogesh-chawla.com
+        </a>
+      </p>
+    </section>
 
     <div class="actions">
       <a class="btn" href="Yogesh_Chawla_CV.pdf" download>
-        Download PDF
+        Download CV (PDF)
       </a>
       <a class="btn secondary" href="Yogesh_Chawla_CV.pdf" target="_blank">
-        Open in New Tab
+        Open CV in New Tab
       </a>
     </div>
 
@@ -143,6 +189,7 @@
     <footer>
       © <span id="year"></span> Yogesh Chawla
     </footer>
+
   </main>
 
   <script>
